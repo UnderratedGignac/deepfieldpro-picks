@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepFieldPro — Football Picks With a Public Record</title>
+<meta name="description" content="Football picks from a pricing model that compares bookmaker odds with sharp-market fair odds. Free daily pick on Telegram, every result in public. VIP $5/month. 18+.">
+<meta property="og:title" content="DeepFieldPro — football picks with a public record">
+<meta property="og:description" content="A free pick every day on Telegram. Wins and losses in public. VIP $5/month. 18+.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<style>
+  :root {
+    --bg: #0b1f33; --panel: #102a44; --line: #1d3d5e; --text: #f5f7fa;
+    --muted: #a9b8c8; --green: #22c55e; --green-ink: #062b14; --warn: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 20px 0; display: flex; align-items: center; gap: 12px; }
+  header img { width: 44px; height: 44px; border-radius: 50%; }
+  header b { font-size: 18px; letter-spacing: .3px; }
+  .hero { padding: 48px 0 32px; }
+  h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.15; margin: 0 0 16px; }
+  h1 em { color: var(--green); font-style: normal; }
+  .lead { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0 0 28px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 14px 22px; border-radius: 10px; font-weight: 700;
+    text-decoration: none; border: 2px solid var(--green);
+  }
+  .btn.primary { background: var(--green); color: var(--green-ink); }
+  .btn.ghost { color: var(--green); }
+  section { padding: 36px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 26px; margin: 0 0 18px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); }
+  .stat { font-size: 30px; font-weight: 800; color: var(--green); margin: 0; }
+  .stat.neutral { color: var(--text); }
+  .note { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  .price { font-size: 44px; font-weight: 800; margin: 0; }
+  .price span { font-size: 18px; color: var(--muted); font-weight: 500; }
+  ul.ticks { list-style: none; padding: 0; margin: 14px 0 20px; }
+  ul.ticks li { padding: 4px 0 4px 28px; position: relative; }
+  ul.ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+  details { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 700; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+  .warn { border-color: var(--warn); }
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+  a { color: var(--green); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="logo.png" alt="DeepFieldPro logo">
+    <b>DeepFieldPro</b>
+  </header>
+
+  <div class="hero">
+    <h1>Football picks with the <em>losing record in public</em>.</h1>
+    <p class="lead">Our model compares bookmaker odds with sharp-market (Pinnacle) fair odds and flags prices that look too generous.
+      Every pick is logged before kickoff and graded automatically — wins and losses.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://t.me/DeepFieldProFree">Get the free daily pick</a>
+      <a class="btn ghost" href="https://t.me/Deepfieldpro_bot">Open the bot</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="grid">
+      <div class="card"><h3>1 · Price every match</h3><p>A Dixon-Coles model rates every team and turns it into fair odds for each outcome.</p></div>
+      <div class="card"><h3>2 · Compare to the sharp market</h3><p>Pinnacle's prices are the sharpest in football. We flag picks where a bookmaker pays more than they're worth.</p></div>
+      <div class="card"><h3>3 · Log it, then grade it</h3><p>Each pick is recorded before kickoff and settled from the real score. Nothing gets deleted.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The record so far</h2>
+    <div class="grid">
+      <div class="card"><p class="stat neutral">278W / 368L</p><p>Settled picks since July 2026 — mostly at odds of 2.5 or more, so more losses than wins is normal</p></div>
+      <div class="card"><p class="stat">+29%</p><p>Return per pick at a flat 1-unit stake</p></div>
+      <div class="card"><p class="stat">83%</p><p>Of picks priced better than the market's closing line</p></div>
+    </div>
+    <p class="note">Snapshot of 29 Oct 2026. Paper-traded results from our own ledger, not real-money bets.
+      The live record — every pick, win or lose — is always in the bot: send <b>/history</b> to <a href="https://t.me/Deepfieldpro_bot">@Deepfieldpro_bot</a>.
+      A few hundred picks is still a small sample; past results do not guarantee future returns.</p>
+  </section>
+
+  <section>
+    <h2>Free vs VIP</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Free channel</h3>
+        <p class="price">$0</p>
+        <ul class="ticks">
+          <li>1 pick every day</li>
+          <li>Nightly results recap, losses included</li>
+          <li>Full track record in the bot</li>
+        </ul>
+        <a class="btn ghost" href="https://t.me/DeepFieldProFree">Join free</a>
+      </div>
+      <div class="card">
+        <h3>VIP</h3>
+        <p class="price">$5 <span>/ month</span></p>
+        <ul class="ticks">
+          <li>Every pick, pushed to your phone</li>
+          <li>An exact stake for <em>your</em> balance (quarter-Kelly, capped)</li>
+          <li>Private VIP channel</li>
+          <li>Pay with Binance Pay</li>
+        </ul>
+        <a class="btn primary" href="https://t.me/Deepfieldpro_bot">Subscribe in the bot</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <details class="warn"><summary>Do you guarantee wins?</summary>
+      <p>No. Nobody honest can. Most picks are at odds above 2.5, so they lose more often than they win, and losing weeks happen.
+        We publish every result so you can judge the record yourself.</p></details>
+    <details><summary>Are these real-money results?</summary>
+      <p>No — they are paper-traded: each pick is logged at the price available when it was made and graded from the real score.</p></details>
+    <details><summary>How do I pay?</summary>
+      <p>Open <a href="https://t.me/Deepfieldpro_bot">@Deepfieldpro_bot</a>, tap <b>Subscribe via Binance Pay</b>, pay 5 USDT, then send <b>/confirm</b> with your Binance Pay order ID.
+        Access is activated after the payment is checked.</p></details>
+    <details><summary>How much should I bet?</summary>
+      <p>Only money you can afford to lose. VIPs tell the bot their balance and get a stake per pick, capped at 2% per pick and 10% in total.</p></details>
+  </section>
+
+  <footer>
+    18+ only. Betting involves risk and may be restricted where you live — check your local laws.
+    Paper-traded model; past results do not guarantee future returns. Not financial advice.
+    <br>© 2026 DeepFieldPro · <a href="https://t.me/DeepFieldProFree">Telegram</a>
+  </footer>
+</div>
+</body>
+</html>
